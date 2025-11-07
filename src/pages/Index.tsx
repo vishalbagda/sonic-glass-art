@@ -1,12 +1,56 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Skills } from "@/components/Skills";
+import { Services } from "@/components/Services";
+import { Portfolio } from "@/components/Portfolio";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { soundManager } from "@/utils/soundManager";
 
 const Index = () => {
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (Math.abs(currentScrollY - lastScrollY) > 50) {
+        soundManager.playScroll();
+        lastScrollY = currentScrollY;
+      }
+      
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", requestTick);
+
+    return () => {
+      window.removeEventListener("scroll", requestTick);
+    };
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative">
+      <Navigation />
+      <Hero />
+      <About />
+      <Skills />
+      <Services />
+      <Portfolio />
+      <Contact />
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 };
