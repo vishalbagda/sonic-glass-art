@@ -20,8 +20,9 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <div className="relative w-full max-w-md aspect-square glass p-8 rounded-3xl">
-              <div className="w-full h-full rounded-2xl overflow-hidden">
+            <div className="relative w-full max-w-md aspect-square glass-strong p-8 rounded-3xl shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 rounded-3xl"></div>
+              <div className="relative w-full h-full rounded-2xl overflow-hidden glass border-4 border-white/30">
                 <img
                   src="/placeholder.svg"
                   alt="About"
@@ -37,7 +38,7 @@ export const About = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="glass glass-hover p-6 rounded-2xl text-center space-y-2 transition-all"
+                  className="glass-strong glass-hover p-6 rounded-2xl text-center space-y-2 shadow-lg"
                 >
                   <stat.icon className="w-8 h-8 mx-auto text-primary" />
                   <h3 className="font-semibold text-foreground">{stat.label}</h3>

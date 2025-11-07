@@ -38,7 +38,7 @@ export const ScrollToTop = () => {
     <Button
       onClick={scrollToTop}
       size="icon"
-      className="fixed bottom-8 right-8 z-50 btn-glass w-14 h-14 rounded-2xl shadow-lg"
+      className="fixed bottom-8 right-8 z-50 glass-strong glass-hover w-16 h-16 rounded-2xl shadow-2xl border-2 border-white/30"
     >
       <ArrowUp className="w-6 h-6" />
     </Button>

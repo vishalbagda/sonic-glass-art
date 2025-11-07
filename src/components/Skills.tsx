@@ -29,7 +29,10 @@ export const Skills = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Frontend */}
-          <div className="glass p-8 rounded-3xl space-y-6">
+          <div className="glass-strong p-8 rounded-3xl space-y-6 shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent rounded-3xl"></div>
+            <div className="relative">
+            </div>
             <h3 className="text-2xl font-bold text-center mb-8">Frontend developer</h3>
             <div className="grid grid-cols-2 gap-6">
               {frontendSkills.map((skill, index) => (
@@ -45,7 +48,10 @@ export const Skills = () => {
           </div>
 
           {/* Backend */}
-          <div className="glass p-8 rounded-3xl space-y-6">
+          <div className="glass-strong p-8 rounded-3xl space-y-6 shadow-2xl relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-transparent rounded-3xl"></div>
+            <div className="relative">
+            </div>
             <h3 className="text-2xl font-bold text-center mb-8">Backend developer</h3>
             <div className="grid grid-cols-2 gap-6">
               {backendSkills.map((skill, index) => (

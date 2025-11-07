@@ -102,8 +102,27 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-gradient-to-br from-background via-background to-secondary/5 text-foreground;
+    @apply text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, 
+      hsl(200, 20%, 98%) 0%,
+      hsl(195, 30%, 95%) 25%,
+      hsl(190, 25%, 96%) 50%,
+      hsl(185, 30%, 94%) 75%,
+      hsl(195, 25%, 97%) 100%
+    );
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background: linear-gradient(135deg,
+      hsl(200, 25%, 8%) 0%,
+      hsl(195, 30%, 10%) 25%,
+      hsl(190, 25%, 9%) 50%,
+      hsl(185, 30%, 11%) 75%,
+      hsl(195, 25%, 10%) 100%
+    );
+    background-attachment: fixed;
   }
 
   html {
@@ -113,12 +132,28 @@ All colors MUST be HSL.
 
 @layer utilities {
   .glass {
-    @apply bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10;
-    box-shadow: var(--shadow-glass);
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-2xl border border-white/30 dark:border-white/20;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  }
+
+  .glass-strong {
+    @apply bg-white/20 dark:bg-white/10 backdrop-blur-3xl border-2 border-white/40 dark:border-white/25;
+    box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.25),
+                inset 0 1px 2px 0 rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.08));
   }
 
   .glass-hover {
-    @apply transition-all duration-300 hover:shadow-[0_12px_48px_0_hsla(195,85%,45%,0.25)];
+    @apply transition-all duration-500 hover:bg-white/25 dark:hover:bg-white/15;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-hover:hover {
+    box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.35),
+                inset 0 2px 3px 0 rgba(255, 255, 255, 0.6);
+    transform: translateY(-4px);
   }
 
   .text-gradient {
@@ -126,7 +161,16 @@ All colors MUST be HSL.
   }
 
   .btn-glass {
-    @apply glass glass-hover px-8 py-3 rounded-2xl font-semibold transition-all;
+    @apply glass-strong glass-hover px-8 py-3 rounded-2xl font-semibold;
+  }
+
+  .section-glass {
+    @apply relative;
+  }
+
+  .section-glass::before {
+    content: '';
+    @apply absolute inset-0 bg-white/5 dark:bg-white/2 backdrop-blur-3xl -z-10 rounded-3xl;
   }
 }
 

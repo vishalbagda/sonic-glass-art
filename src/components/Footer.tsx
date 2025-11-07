@@ -11,7 +11,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="py-12 glass mt-20">
+    <footer className="py-12 glass-strong mt-20 shadow-2xl">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-8">
           <h2 className="text-3xl font-bold">Smith</h2>
@@ -40,21 +40,21 @@ export const Footer = () => {
           <div className="flex justify-center gap-6">
             <button
               onClick={() => soundManager.playClick()}
-              className="w-12 h-12 glass glass-hover rounded-xl flex items-center justify-center transition-all"
+              className="w-14 h-14 glass-strong glass-hover rounded-2xl flex items-center justify-center shadow-lg"
             >
-              <Facebook className="w-5 h-5" />
+              <Facebook className="w-6 h-6 text-primary" />
             </button>
             <button
               onClick={() => soundManager.playClick()}
-              className="w-12 h-12 glass glass-hover rounded-xl flex items-center justify-center transition-all"
+              className="w-14 h-14 glass-strong glass-hover rounded-2xl flex items-center justify-center shadow-lg"
             >
-              <Instagram className="w-5 h-5" />
+              <Instagram className="w-6 h-6 text-primary" />
             </button>
             <button
               onClick={() => soundManager.playClick()}
-              className="w-12 h-12 glass glass-hover rounded-xl flex items-center justify-center transition-all"
+              className="w-14 h-14 glass-strong glass-hover rounded-2xl flex items-center justify-center shadow-lg"
             >
-              <Twitter className="w-5 h-5" />
+              <Twitter className="w-6 h-6 text-primary" />
             </button>
           </div>
 

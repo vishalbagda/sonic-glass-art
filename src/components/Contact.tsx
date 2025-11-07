@@ -25,7 +25,7 @@ export const Contact = () => {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold mb-8">Talk to me</h3>
             
-            <div className="glass glass-hover p-6 rounded-2xl text-center space-y-3 transition-all">
+            <div className="glass-strong glass-hover p-6 rounded-2xl text-center space-y-3 shadow-lg">
               <Mail className="w-10 h-10 mx-auto text-primary" />
               <h4 className="font-semibold text-lg">Email</h4>
               <p className="text-sm text-muted-foreground">user@gmail.com</p>
@@ -38,7 +38,7 @@ export const Contact = () => {
               </Button>
             </div>
 
-            <div className="glass glass-hover p-6 rounded-2xl text-center space-y-3 transition-all">
+            <div className="glass-strong glass-hover p-6 rounded-2xl text-center space-y-3 shadow-lg">
               <MessageCircle className="w-10 h-10 mx-auto text-primary" />
               <h4 className="font-semibold text-lg">Whatsapp</h4>
               <p className="text-sm text-muted-foreground">999-888-777</p>
@@ -51,7 +51,7 @@ export const Contact = () => {
               </Button>
             </div>
 
-            <div className="glass glass-hover p-6 rounded-2xl text-center space-y-3 transition-all">
+            <div className="glass-strong glass-hover p-6 rounded-2xl text-center space-y-3 shadow-lg">
               <MessageCircle className="w-10 h-10 mx-auto text-primary" />
               <h4 className="font-semibold text-lg">Messenger</h4>
               <p className="text-sm text-muted-foreground">user.fb123</p>
@@ -74,7 +74,7 @@ export const Contact = () => {
                 <label className="text-sm text-muted-foreground">Name</label>
                 <Input
                   placeholder="Insert your name"
-                  className="glass border-0"
+                  className="glass-strong border-0 shadow-inner"
                   onClick={() => soundManager.playClick()}
                 />
               </div>
@@ -84,7 +84,7 @@ export const Contact = () => {
                 <Input
                   type="email"
                   placeholder="Insert your email"
-                  className="glass border-0"
+                  className="glass-strong border-0 shadow-inner"
                   onClick={() => soundManager.playClick()}
                 />
               </div>
@@ -93,7 +93,7 @@ export const Contact = () => {
                 <label className="text-sm text-muted-foreground">Project</label>
                 <Textarea
                   placeholder="Write your project"
-                  className="glass border-0 min-h-[150px] resize-none"
+                  className="glass-strong border-0 min-h-[150px] resize-none shadow-inner"
                   onClick={() => soundManager.playClick()}
                 />
               </div>

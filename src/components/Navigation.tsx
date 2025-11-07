@@ -32,8 +32,8 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-4" : "py-6 bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "glass-strong py-4 shadow-xl" : "py-6 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">

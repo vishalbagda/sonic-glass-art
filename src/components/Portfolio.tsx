@@ -69,9 +69,10 @@ export const Portfolio = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="glass glass-hover rounded-3xl overflow-hidden group cursor-pointer"
+              className="glass-strong glass-hover rounded-3xl overflow-hidden group cursor-pointer shadow-2xl relative"
               onClick={() => soundManager.playClick()}
             >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
               <div className="aspect-video overflow-hidden">
                 <img
                   src={project.image}
@@ -79,7 +80,7 @@ export const Portfolio = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 relative z-20 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
                 <h3 className="text-xl font-bold mb-3">{project.title}</h3>
                 <Button
                   variant="ghost"

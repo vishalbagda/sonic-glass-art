@@ -33,9 +33,12 @@ export const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="glass glass-hover p-8 rounded-3xl space-y-6 group transition-all"
+              className="glass-strong glass-hover p-8 rounded-3xl space-y-6 group shadow-2xl relative overflow-hidden"
             >
-              <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative">
+              </div>
+              <div className="w-16 h-16 glass-strong rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                 <service.icon className="w-8 h-8 text-primary" />
               </div>
               
